@@ -22,6 +22,9 @@ server: $(SERVER_OBJ)
 clean:
 	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server
 
+fclean:
+	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server $(HEADER).a
+
 re:
 	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server
 	make all
