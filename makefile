@@ -20,11 +20,9 @@ server: $(SERVER_OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server
+	rm -f $(CLIENT_OBJ) $(SERVER_OBJ)
 
-fclean:
-	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server $(HEADER).a
+fclean: clean
+	rm -f client server $(HEADER).a
 
-re:
-	rm -f $(CLIENT_OBJ) $(SERVER_OBJ) client server
-	make all
+re: fclean all
